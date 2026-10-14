@@ -48,6 +48,18 @@ class DanhSachLK:
             p=p.next
         return None
 
+    def Sapxep(self):
+        if self.head is None:
+            return
+        p=self.head
+        while p is not None:
+            q=p.next
+            while q is not None:
+                if p.data>q.data:
+                    p.data,q.data=q.data,p.data
+                q=q.next
+            p=p.data
+
 #vd
 ds=DanhSachLK()
 ds.themdau(3)
